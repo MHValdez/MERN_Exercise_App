@@ -1,0 +1,211 @@
+/*  ===== MOBILE styles (inherited by all devices) ===== 
+/*  ===== See tablet, desktop, and print @media queries at the bottom.
+
+
+/*   ----- Imports  -----  */
+/*
+@font-face {                 Add fonts from the server ... 
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+}
+*/
+/* ...or hosted services like Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Poppins:wght@200&display=swap');
+
+@import '../node_modules/modern-normalize/modern-normalize.css';
+                            /* npm install modern-normalize 
+                              Resets elements for browser consistancy.  
+                              http://nicolasgallagher.com/about-normalize-css/ 
+                            */
+
+/* @import "component1.css";    Component-specific stylesheets, if any */
+
+
+/*   ----- Variables  -----  */
+:root {
+  --custom-blue-light: hsla(199, 100%, 85%, 1);
+  --custom-blue-med: hsl(199, 33%, 54%);
+  --custom-blue-dark: rgb(32, 60, 73);
+  --custom-pale: rgb(236, 236, 236);
+  --custom-gray: hsl(0, 0%, 34%);
+  --custom-yellow: rgb(255, 250, 180);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {                     /* Can alternatively define in html {} or :root {} */
+  color: var(--custom-gray);
+  background-color: var(--custom-blue-med);
+  border: 2px solid var(--custom-gray);
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  margin: auto 0px;
+  padding: 1%, 0;
+}
+
+/* ----- Anchors ----- Text links */
+/* None */
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  background-color: var(--custom-pale);
+  color: var(--custom-gray);
+  border: 1px solid var(--custom-pale);
+  margin: auto;
+  padding: 6%;
+  text-align: center
+}
+nav a {
+  text-decoration: none;
+  background-color: var(--custom-blue-med);
+  color: var(--custom-pale);
+  font-size: 1.1em;
+  line-height: 0.8em;
+  vertical-align: middle;
+  border: 2px solid var(--custom-pale);
+  margin: 3% 8%;
+  padding: 2%;
+  border-radius: 5px;
+}
+  nav a:hover {
+    font-weight: 700;
+    background-color: var(--custom-pale);
+    color: var(--custom-blue-med);
+    border: 2px solid var(--custom-blue-med);
+  }
+  nav a:active {
+    background-color: var(--custom-blue-med);
+    color: var(--custom-yellow);
+  }
+
+/*  ----- Page layout blocks -----  */
+header, footer {
+  text-align: center;
+  background-color: var(--custom-blue-light);
+  color: var(--custom-gray);
+  border: 0;
+  margin: 2% 0;
+}
+header {
+  padding: 1% 0;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+main {
+  background-color: var(--custom-pale);
+  color: var(--custom-blue-dark);
+  border: 0;
+  border-top: 2px solid var(--custom-blue-dark);
+  padding: 0.5%;
+}
+footer {
+  padding: 0.5% 0;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+/*  -----  Typography  ----- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--custom-blue-med);
+  font-family: 'Poppins', sans-serif;
+} /* Define consistant font family.*/
+h1 {
+  color: var(--custom-gray);
+}
+
+/*  ----- Coding or instructional typography ----- */
+/* None */
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 3%;
+  padding: 2%;
+  border: 1px solid var(--custom-gray);
+}
+tr td {
+  padding: 0.3em 0.5em;
+  border: 1px solid var(--custom-gray);
+  color: var(--custom-gray);
+}
+  tr:nth-child(even) {
+    background-color: var(--custom-blue-light);
+  }
+th {
+  background-color: var(--custom-blue-light);
+  color: var(--custom-gray);
+  padding: 0.3em 0.5em;
+  border: none;
+}
+
+
+/*  ----- Form ----- */
+form {
+  text-align: center;
+  color: var(--custom-gray);
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  margin: 1%;
+  padding: 1%;
+}
+fieldset {
+  padding: 2%;
+}
+  legend {
+    font-weight: 700;
+    color: var(--custom-blue-med)
+  }
+label {
+    display:block;
+    font-weight: 500;
+    margin: 1%;
+    margin-top:30px;
+    padding: 1%;
+  }
+  button {
+    font-weight: 300;
+    color: var(--custom-pale);
+    background-color: var(--custom-blue-med);
+    margin: 1%;
+    padding: 2%;
+    border: none;
+    border-radius: 5%;
+  }
+    button:focus {
+      font-weight: 700;
+      background-color: var(--custom-blue-dark);
+      color: var(--custom-yellow);
+    }
+  input {
+    margin: 1%;
+    padding: 1%;
+  }
+    input:focus {
+      background-color: var(--custom-yellow);
+    }
+    input:valid {
+      background-color: var(--custom-blue-light);
+    }
+    input:invalid {
+      background-color: var(--custom-yellow);
+    }
+    ::placeholder {
+      color: var(--custom-gray);
+    }
+
+/* ----- Media ----- */
+/* None */
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/* None */
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+/* None */
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+/* None */
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+/* None */
